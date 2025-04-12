@@ -2,6 +2,8 @@ import React from "react";
 import { Spotlight } from "./UI/Spotlight";
 import { cn } from "@/utils/cn";
 import { TextGenerateEffect } from "./UI/TextGenEffect";
+import MagicButton from "./UI/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -12,10 +14,10 @@ const Hero = () => {
           fill="white"
         />
         <Spotlight
-          className="top-10 left-full h-[80vh] w-[50vw]"
+          className="h-[80vh] w-[50vw] top-10 left-full"
           fill="purple"
         />
-        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
+        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
       <div className="flex h-screen w-full items-center justify-center bg-white dark:bg-black-001 absolute top-0 left-0">
@@ -39,10 +41,20 @@ const Hero = () => {
 
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming concepts into seamless experiences"
+            words="Transforming Concepts into Seamless User Experiences"
           />
 
-          <p className="text-center">Hi, This is Pravin and Welcome to my Portfolio</p>
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            Hi, This is Pravin and Welcome to my Portfolio
+          </p>
+
+          <a href="#about">
+            <MagicButton
+              title="show my work"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
         </div>
       </div>
     </div>
